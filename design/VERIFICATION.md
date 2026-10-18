@@ -1,4 +1,44 @@
-# Design and verification record
+# IITR redesign verification — 18 October 2026
+
+## Actual references used
+
+- Official ECE department: https://www.iitr.ac.in/Departments/Electronics%20and%20Communication%20Engineering%20Department/Home.html
+- Official site CSS: https://cmsredesign.channeli.in/library/css/variables/colors.css
+- Official fonts: https://cmsredesign.channeli.in/library/css/globals/fonts.css
+- Official masthead: https://cmsredesign.channeli.in/library/css/components/header.css
+- Official navigation: https://cmsredesign.channeli.in/library/css/components/menu.css
+- IITR logo: https://cmsredesign.channeli.in/library/assets/images/IITR_Logo.svg
+- ECE logo: https://cmsredesign.channeli.in/library/assets/images/ece_header.png
+
+The current design follows the official existing system directly. It does not use an AI-generated mockup as its reference.
+
+## Changes and visual evidence
+
+Replaced the green/serif identity with the actual IITR colours: bright blue `#0067b3`, formal blue `#5183b8`, heading grey `#4c4c4c`, text `#232323`, and pale blue `rgba(229,238,244,.49)`. Used the real IITR and ECE logos in the centred department masthead. Matched Nunito Sans for content and Lato for uppercase navigation. Replaced promotional headlines with descriptive academic headings. Added institutional utility links, breadcrumbs, a pale-blue footer and dark lower footer, and a keyboard skip link. Removed the generated campus drawing from the app and deployment assets.
+
+Browser-computed CSS confirmed Nunito Sans for body/headings, Lato for navigation, and the exact blue token. All local logo images loaded. Font files are served from `public/fonts` with their OFL licences. The ECE anniversary mark is the exact asset currently used by the department site, rather than a newly invented identity.
+
+Desktop Chrome inspection succeeded at the normal 1920-pixel viewport. Screenshot: `redesign-desktop.jpg`, saved through a local-only form and inspected using view_image. Compared the official masthead structure, logo treatment, sans-serif typography, navigation casing, accent/pale-surface colours, and rectangular list/filter components. The project directory and application controls remain purpose-built for this portal; the site does not copy the department homepage carousel or claim to be an official live service.
+
+At 390 × 844, DOM checks confirmed a single-column directory, visible role selector/navigation, a working collapsible filter panel, and no horizontal overflow. Filtering to Signal Processing produced exactly two projects. Browser screenshot capture at the emulated viewport timed out, so mobile visual screenshot verification remains incomplete. Temporary viewport overrides were reset.
+
+## Functional and build checks
+
+- `npm test`: all three existing workflow tests passed.
+- `npm run build`: passed after the UI changes.
+- Chrome: search plus research-area filter returned the correct single RISC-V project; Clear all restored the directory.
+- Chrome: project details showed qualifications and all project metadata; application form retained the statement field, PDF control, and disabled Submit until a résumé is available.
+- Chrome: professor role, project-management workspace, applicant review, and in-person meeting form remained accessible with their existing controls.
+- No domain model, storage format, authentication, role-switching logic, or user/browser data was changed by the redesign. The existing application tests exercise duplicate prevention, status decisions, and meeting validation.
+- Previous PDF-upload automation restriction remains: actual file selection requires Chrome extension file-URL access, which was not enabled. The redesign does not claim new end-to-end upload coverage.
+
+The desktop screenshot may include locally persisted sample data from earlier QA. A fresh browser starts with the original eight illustrative projects.
+
+---
+
+## Initial prototype record — historical, superseded design
+
+### Original verification record
 
 ## References
 

@@ -32,4 +32,4 @@ The full application needs verified faculty accounts, server-enforced ECE member
 
 ## Design and verification
 
-See [design/VERIFICATION.md](design/VERIFICATION.md). The generated directory concept is in `design/student-directory-concept.png`. The architectural illustration is in `public/assets/campus.png`. Both were generated using the built-in Image Gen tool.
+The current redesign follows the official ECE department site: its centred two-logo masthead, Nunito Sans content font, Lato navigation, blue colour tokens, utility links, and institutional footer. Logos and fonts are served locally. See [design/VERIFICATION.md](design/VERIFICATION.md) for the source references and checks, and [design/redesign-desktop.jpg](design/redesign-desktop.jpg) for the current screenshot. The earlier generated concept remains in `design/student-directory-concept.png` as historical context; it is no longer the design reference.
