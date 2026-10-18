@@ -15,7 +15,7 @@ Compared: primary heading and navigation copy, masthead and search placement, tw
 
 Intentional differences from the generated concept: accurate fictional sample records replace invented concept copy; funding and qualifications match the requested workflow; search runs as the user types instead of a Search button; weekly commitment uses exclusive radio choices; a duration filter is omitted; the building is a separately generated asset; cards have more room for readable text and funding. Prototype/local-data disclosures were added intentionally. These differences mean this is not a pixel-identical implementation of the concept.
 
-Screenshot archival was attempted but could not complete: the CUA runtime filesystem is read-only, its local fetch failed, and Chrome blocked the local screenshot form POST with ERR_BLOCKED_BY_CLIENT. Direct Chrome screenshot inspection succeeded. Consequently, the skill's final paired local view_image comparison could not be completed; no claim of that check passing is made.
+Screenshot archival initially reported errors: the CUA runtime filesystem is read-only, its local fetch failed, and Chrome blocked the local form response with ERR_BLOCKED_BY_CLIENT. Inspection of the actual workspace subsequently confirmed that the server had saved `prototype-mobile.jpg` successfully. The concept and latest saved mobile render were both inspected with view_image in the same QA pass. Desktop screenshots were inspected directly in Chrome; a desktop screenshot file was not saved. The implementation was visually checked against the concept for the comparison points above, with intentional deviations explicitly recorded rather than claiming pixel identity.
 
 ## Functional verification
 
